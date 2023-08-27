@@ -3,9 +3,10 @@ import React from "react";
 export type FormLocationProps = {
   label: string;
   isTitle?: boolean;
+  value: string;
 };
 
-const FormLocation = ({ label, isTitle }: FormLocationProps) => {
+const FormLocation = ({ label, isTitle, value }: FormLocationProps) => {
   const ratioWidth = isTitle ? "30%" : "70%";
 
   return (
@@ -14,7 +15,7 @@ const FormLocation = ({ label, isTitle }: FormLocationProps) => {
         {label}
       </div>
       <div className="h-48 mt-4 rounded-8 p-12 text-15 text-gray-500 leading-22 placeholder-gray-300 bg-gray-100">
-        TODO
+        {value}
       </div>
     </div>
   );
