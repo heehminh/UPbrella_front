@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "code": 200,
+  "message": "개선 요청 내역 조회 성공",
+  "data": {
+    "improvementReports": [
+      {
+        "id": 33,
+        "umbrellaUuid": 99,
+        "content": "정상적인 시기에 반납하기가 어려울 떈 어떻게 하죠?",
+        "etc": "기타 사항"
+      }
+    ]
+  }
+}

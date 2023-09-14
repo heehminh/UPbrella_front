@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "code": 200,
+  "message": "상태 신고 내역 조회 성공",
+  "data": {
+    "conditionReports": [
+      {
+        "id": 33,
+        "umbrellaUuid": 99,
+        "content": "content",
+        "etc": "etc"
+      }
+    ]
+  }
+}
