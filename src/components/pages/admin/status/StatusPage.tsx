@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 
-const AdminStatusPage = () => {
+const StatusPage = () => {
   // TODO - api 연결
   // 신고 내역 조회
   const improvementReports = improvement.data.improvementReports;
@@ -40,4 +40,4 @@ const AdminStatusPage = () => {
   );
 };
 
-export default AdminStatusPage;
+export default StatusPage;

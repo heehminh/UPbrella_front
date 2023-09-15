@@ -21,8 +21,8 @@ const adminMenu = [
   },
   {
     title: "상태신고 / 개선사항 확인",
-    navToUrl: "/admin/umbrella-status",
-    disabled: true,
+    navToUrl: ADMIN_ROUTES_URL.status.path,
+    disabled: false,
   },
   {
     title: "협업 지점 관리",

@@ -1,4 +1,4 @@
-import AdminStatusPage from "./AdminStatusPage";
+import AdminStatusPage from "./StatusPage";
 import { Meta, StoryFn } from "@storybook/react";
 
 export default {
