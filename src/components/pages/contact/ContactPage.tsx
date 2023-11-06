@@ -73,11 +73,11 @@ const ContactPage = () => {
   return (
     <>
       <div className="min-h-screen flex flex-col">
-        <div className="h-full bg-cover px-40 mdMaxMin:pr-0 flex-1">
+        <div className="h-full bg-cover px-40 mdMaxMin:px-0 flex-1">
           <FixWidthWrapper>
             <HeaderContainer />
 
-            <div className="h-full max-w-[1440px] pb-20 w-full px-40 mdMaxMin:px-0 lg:px-0 lg:pr-40 mdMaxMin:pr-0 flex flex-col justify-between">
+            <div className="h-full max-w-[1440px] pb-20 w-full px-40 mdMaxMin:px-0 lg:px-0 mdMaxMin:pr-0 flex flex-col justify-between">
               <div className="h-full flex items-center justify-center mt-100 lg:my-20">
                 <div className="h-full flex items-start justify-between w-full lg:flex-col lg:px-0 ">
                   <div className="flex flex-col w-full py-24 lg:py-0 lgMaxMin:pl-40">
