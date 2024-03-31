@@ -16,8 +16,8 @@ const RentModalAccount = ({
   onClickPostBtn,
 }: RentModalAccountProps) => {
   const BANK_NAME = "카카오뱅크";
-  const ACCOUNT_NUMBER = "7979-86-64503";
-  const ACCOUNT_NAME = "이지우";
+  const ACCOUNT_NUMBER = "7979-93-61771";
+  const ACCOUNT_NAME = "최유나";
 
   const copyAccountToClipboard = () => {
     onClickPostBtn(); // 보관함이 있는 경우 이 시점에 비밀번호 설정
