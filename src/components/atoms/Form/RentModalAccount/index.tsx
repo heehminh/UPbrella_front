@@ -1,3 +1,5 @@
+import { BANK_NAME, ACCOUNT_NUMBER, ACCOUNT_NAME } from "@/constants/Account";
+
 export type RentModalAccountProps = {
   handleCloseDepositModal: () => void;
   umbrellaUuid: number;
@@ -15,10 +17,6 @@ const RentModalAccount = ({
   umbrellaUuid,
   onClickPostBtn,
 }: RentModalAccountProps) => {
-  const BANK_NAME = "카카오뱅크";
-  const ACCOUNT_NUMBER = "7979-93-61771";
-  const ACCOUNT_NAME = "최유나";
-
   const copyAccountToClipboard = () => {
     onClickPostBtn(); // 보관함이 있는 경우 이 시점에 비밀번호 설정
     handleCloseDepositModal(); // (1) 보증금 입금 안내 모달 close
