@@ -1,5 +1,3 @@
-import { BANK_NAME, ACCOUNT_NUMBER, ACCOUNT_NAME } from "@/constants/Account";
-
 export type RentModalAccountProps = {
   handleCloseDepositModal: () => void;
   umbrellaUuid: number;
@@ -17,10 +15,9 @@ const RentModalAccount = ({
   umbrellaUuid,
   onClickPostBtn,
 }: RentModalAccountProps) => {
-  const copyAccountToClipboard = () => {
+  const handleFinishDepositModal = () => {
     onClickPostBtn(); // 보관함이 있는 경우 이 시점에 비밀번호 설정
     handleCloseDepositModal(); // (1) 보증금 입금 안내 모달 close
-    navigator.clipboard.writeText(BANK_NAME + " " + ACCOUNT_NUMBER);
   };
 
   return (
@@ -37,19 +34,11 @@ const RentModalAccount = ({
           <p className="inline font-normal">'번 우산을 빌릴까요?</p>
         </div>
       </div>
-      <div className="flex flex-col">
-        <ol className="mt-16 ml-20 text-gray-700 list-decimal text-14">
-          <li>
-            {BANK_NAME} {ACCOUNT_NUMBER} {ACCOUNT_NAME} 계좌복사
-          </li>
-          <li>보증금 10,000원 입금</li>
-          <li>대여 완료!</li>
-        </ol>
-        <div className="mt-16 font-semibold text-primary-500 text-14 leading-20">
-          14일 이내 반납 시 보증금 전액 환급됩니다.
-        </div>
+      <div className="flex flex-col mt-20 text-primary-500 ">
+        <div>우산 미반납 시 블랙리스트로 등록되어</div>
+        <div>영구적으로 우산 대여가 불가능합니다.</div>
       </div>
-      <div className="flex mt-16">
+      <div className="flex mt-20">
         <div
           className="py-12 mr-8 text-center text-gray-700 border border-gray-300 w-80 rounded-8"
           onClick={handleCloseDepositModal}
@@ -57,10 +46,10 @@ const RentModalAccount = ({
           취소
         </div>
         <div
-          className="w-[calc(100%-80px)] border font-semibold leading-24  mr-8 rounded-8 text-white py-12 text-center bg-primary-500 cursor-pointer"
-          onClick={copyAccountToClipboard}
+          className="w-[calc(100%-80px)] font-semibold leading-24  mr-8 rounded-8 text-white py-12 text-center bg-primary-500 cursor-pointer"
+          onClick={handleFinishDepositModal}
         >
-          계좌 복사하기
+          확인
         </div>
       </div>
     </div>
