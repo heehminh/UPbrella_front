@@ -19,6 +19,7 @@ import ErrorComponent from "@/components/molecules/ErrorComponent";
 import { TCustomError } from "@/types/commonTypes";
 import { getErrorMessage } from "@/utils/error";
 import toast from "react-hot-toast";
+import RentDeposit from "@/components/atoms/Form/RentDeposit";
 
 const RentPage = () => {
   // 대여 전(false), 대여 후(true)
@@ -163,6 +164,10 @@ const RentPage = () => {
             <FormBasic label="전화번호" value={phone} />
             <FormLocationMolecules region={region} storeName={storeName} />
             <FormBasic label="우산번호" value={umbrellaUuid} />
+
+            {/* 보증금 안내 */}
+            <RentDeposit />
+
             <FormStatus
               label="상태신고"
               placeholder={`우산이나 대여 환경에 문제가 있다면 ${maxCharLimit}자 이내로 작성해주세요`}
