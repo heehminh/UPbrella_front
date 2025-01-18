@@ -3,6 +3,7 @@ name: FE Production Deploy
 on:
   push:
     branches: ["release"]
+  workflow_dispatch:
 
 env:
   working-directory: ./
