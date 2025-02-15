@@ -1,5 +1,5 @@
 import Instagram from "@/components/atoms/Contact/Instagram";
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import Input from "@/components/atoms/Contact/Input";
 import TextArea from "@/components/atoms/Contact/TextArea";
 import Button from "@/components/atoms/Contact/Button";
@@ -8,7 +8,6 @@ import { formatPhoneNumber } from "@/utils/utils";
 import toast from "react-hot-toast";
 import Footer from "@/components/organisms/Footer";
 import { HeaderContainer } from "@/components/organisms/Header/HeaderContainer";
-import { FixWidthWrapper } from "@/components/pages/story/UpbrellaStoryPage";
 import SeoMetaTag from "@/utils/SeoMetaTag";
 
 const ContactPage = () => {
@@ -160,6 +159,10 @@ const ContactPage = () => {
       </div>
     </>
   );
+};
+
+export const FixWidthWrapper = ({ children }: { children: ReactNode }) => {
+  return <div className="max-w-[1440px] mx-auto md:px-20 sm:mx-0">{children}</div>;
 };
 
 export default ContactPage;
