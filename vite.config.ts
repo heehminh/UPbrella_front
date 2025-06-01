@@ -20,9 +20,10 @@ export default ({ mode }) => {
       }),
     ],
     server: {
+      port: 3000,
       proxy: {
         "/api": {
-          target: "https://api.upbrella.co.kr",
+          target: "https://api.upbrella.link",
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
